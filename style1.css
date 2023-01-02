@@ -1,0 +1,83 @@
+body{
+    padding: 0;
+    margin: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.p1{   
+   margin-left: 150px; 
+    
+}
+.container1{
+    display: flex;
+}
+.container2{
+    display: flex;
+}
+.boxhead1{
+    width: 350px;
+    height: 40px;
+    border: solid;
+    color: black;
+}
+.boxhead2{
+    width: 250px;
+    height: 40px;
+    border: solid;
+    color: black;
+}
+.box1{
+    width: 350px;
+    height: 150px;
+    border: solid;
+    color: black;
+}
+.box2{
+    width: 250px;
+    height: 150px;
+    border: solid;
+    color: black;
+}
+div p,h3{
+    padding-left: 10px;
+}
+.margin1{
+    margin-left: 200px;
+}
+span{
+    margin-left: 100px;
+}
+.figure{
+    margin-left: 100px;
+}
+table,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  table{
+    margin-left: 150px;
+  }
+  @media screen and (max-width: 770px){
+    .figure {
+        width: 50%;
+        margin: 0;
+    }
+    table {
+     margin: 0;
+     width: 250px;
+    }
+    .p1{
+        margin-left: 0;
+    }
+*{
+    font-size: 12px;
+}
+.margin1{
+    margin: 0;
+}
+.figure{
+    width: 282px;
+    height: 160px;
+}
+
+
+  }

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style1.css">
+    <title>LESSON</title>
+</head>
+<body>
+    <h3>I. COURSE CODE/TITLE: CS 101/Discreet Structure 1</h3><br>
+    <h3>II. SUBJECT MATTER</h3>
+   <div class="container1">
+    <div class="boxhead1">
+        <h3>TOPICS</h3>
+    </div>
+    <div class="boxhead2">
+        <h3>TIME - FRAME</h3>
+    </div>
+   </div>
+   <div class="container2">
+    <div class="box1">
+        <p>Introduction to Set Theory</p>
+        <p>- Sets</p>
+        <p>- Functions</p>
+        <p>- Sequences and Summations</p>
+    </div>
+    <div class="box2">
+        <p>7.5 hours</p>
+    </div>
+   </div>
+   <h4>Lesson 1.Introduction to Set Theory</h4> 
+   <h3>III. COURSE OUTCOME</h3>
+   <p>a. Discuss the Introduction to Set Theory</p>
+   <p>b. Solve the problems in sets, functions, and sequences and summations</p>
+   <h3>IV. ENGAGEMENT</h3>
+   <p>Discrete mathematics deals with objects that come in discrete bundles, e.g., 1 or 2 babies. In
+    contrast, continuous mathematics deals with objects that vary continuously, e.g., 3.42 inches from
+    a wall. Think of digital watches versus analog watches (ones where the second hand loops around
+    continuously without stopping).</p>
+    <p>Why study discrete mathematics in computer science? It does not directly help us write programs.
+        At the same time, it is the mathematics underlying almost all of computer science. Here are a few
+        examples:</p>
+        <ul>
+            <li>Designing high-speed networks and message routing paths.</li>
+            <li>Finding good algorithms for sorting.</li>
+            <li>Performing web searches.</li>
+            <li>Analyzing algorithms for correctness and efficiency.</li>
+            <li>Formalizing security requirements.</li>
+            <li>Designing cryptographic protocols.</li>
+        </ul>
+        <p>Discrete mathematics uses a range of techniques, some of which is seldom found in its continuous
+            counterpart. This course will roughly cover the following topics and specific applications in
+            computer science.</p>
+        <ol>
+            <li>Sets</li>
+            <li>Functions</li>
+            <li>Sequences and Summations</li>
+        </ol>
+        <h3>Sets</h3>
+        <p>A set is one of the most fundamental object in mathematics.</p>
+        <p><b>SET, INFORMAL.</b> A set is an unordered collections of objects. Our definition is informal because
+            we do not define what a collection" is; a deeper study of sets is out of the scope of this course.</p>
+            <p>Example 1. The following notations all refer to the same set:</p>
+            <p class="p1">{1, 2}, {2, 1}, {1, 2, 1, 2}, {x │ x is an integer; 1 ≤ x ≤ 2}</p>
+            <p>The last example read as \the set of all x such that x is an integer between 1 and 2 (inclusive)".</p>
+            <p>We will encounter the following sets and notations throughout the course:</p>
+            <p>Ø = { }, the empty set.</p>
+            <p>N = {0, 1, 2, 3, ...}, the non-negative integers</p>
+            <p>N<sup>+</sup> = {0, 1, 2, 3, ...}, the positive integers</p>
+            <p>Z = {..., -2, -1, 0, 1, 2, ...}, the integers</p>
+            <p>Q = {q │ q = a/b, a, b ∈ Z, b ≠ 0}, the rational numbers</p>
+            <p>Q<sup>+</sup> = {q │ q ∈ Q, q > 0}, the positive rational numbers/p>
+            <p>R, the real numbers</p>
+            <p>R<sup>+</sup>, the positive reals</p>
+        <p>Given a collection of objects (a set), we may want to know how large is the collection.</p>
+        <p><b>SET CARDINALITY.</b> The cardinality of a set A is the number of (distinct) objects in A, written as
+            │A│. When │A│ ∈ N (a finite integer), A is a finite set; otherwise A is an infinite set. We discuss
+            the cardinality of infinite sets later.</p>
+            <p class="p1">Example 2. │{1, 2, 3}│= │{1, 2, {1, 2}}│ = 3</p>
+            <p>Given two collections of objects (two sets), we may want to know if they are equal, or if one
+                collection contains the other. These notions are formalized as set equality and subsets.</p>
+                <p><b>SET EQUALITY.</b> Two sets S and T are equal, written as S = T, if S and T contains exactly the
+                    same elements, i.e., for every x, x ∈ S ↔ x ∈ T.</p>
+                    <p><b>SUBSETS.</b> A set S is a subset of set T, written as S ⊆ T, if every element in S is also in T, i.e.,
+                        for every x, x ∈ S → x ∈ T. Set S is a strict subset of T, written as S ⊂ T if S ⊆ T, and there exist
+                        some element x ∈ T such that x ∈/ S.</p>
+            <p>Example 3.</p>
+            <ul>
+                <li>{1, 2} ⊆ {1, 2, 3}.</li>
+                <li>{1, 2} ⊂ {1, 2, 3}.</li>
+                <li>{1, 2, 3} ⊆ {1, 2, 3}.</li>
+                <li>{1, 2, 3}/⊂{1, 2, 3}.</li>
+                <li>For any set S, ∅⊆S.</li>
+                <li>For every set S /= ∅, ∅ ⊂S.</li>
+                <li>S ⊆T and T ⊆S if and only if S = T.</li>
+            </ul>
+    <p>Finally, it is time to formalize operations on sets. Given two collection of objects, we may want to
+        merge the collections (set union), identify the objects in common (set intersection), or identify the
+        objects unique to one collection (set difference). We may also be interested in knowing all possible
+        ways of picking one object from each collection (Cartesian product), or all possible ways of picking
+        some objects from just one of the collections (power set).</p>
+        <p><b>SET OPERATIONS.</b> Given sets S and T, we define the following operations:</p>
+        <ul>
+                <li>Power Sets. P(S) is the set of all subsets of S.</li>
+                <li>Cartesian Product. S &#215; T = {(s, t) | s ∈ S, t ∈ T }.</li>
+                <li>Union. S &#8899; T = {x | x ∈ S or x ∈ T }, set of elements in S or T .</li>
+                <li>Intersection. S ∩ T = {x | x ∈ S, x ∈ T }, set of elements in S and T .</li>
+                <li>Difference. S &#8722; T = {x | x ∈ S, x &#8713; T}, set of elements in S but not T.</li>
+                <li>Complements. S = {x | x &#8713; S}, set of elements not in S. This is only
+                     meaningful when we have an implicit universe U of objects, i.e.,</li>
+                <li>S = {x | x ∈ U, x &#8713; S}.</li>
+        </ul>
+            <p>Example 4.</p>
+            <p>Let S = {1, 2, 3}, T = {3, 4}, V = {a, b}. Then:</p>
+            <ul>
+                <li>P(T ) = {∅, {3}, {4}, {3, 4}}.</li>
+                <li>S &#215; V = {(1, a), (1, b), (2, a), (2, b), (3, a), (3, b)}.</li>
+                <li>S &#8899; T = {1, 2, 3, 4}.</li>
+                <li>S ∩ T = {3}.</li>
+                <li>S &#8722; T = {1, 2}.</li>
+                <li>If we are dealing with the set of all integers, S = {. . . , &#8722;2, &#8722;1, 0, 4, 5, . . .}.</li>
+            </ul>
+        <p>Some set operations can be visualized using Venn diagrams.</p>
+        <p>To give an example of working with these set operations, consider thefollowing
+            set identity.</p>
+            <p><b>THEOREM 1.</b> For all sets S and T, S = (S ∩T) &#8746;(S &#8722;T).</p>
+            <p>Proof. We can visualize the set identity using Venn diagrams (see Figure 1.1b
+                and 1.1c). To formally prove the identity, we will show both of the following:</p>
+                <div class="margin1"><p>S ⊆(S ∩T) &#8746;(S &#8722;T) <span>(1.1)</span></p>
+                                     <p>(S ∩T) &#8746;(S &#8722;T) ⊆S <span>(1.2)</span></p>
+
+                </div>
+        <p>To prove (1.1), consider any element x ∈S. Either x ∈T or x ∈/ T.</p>
+        <ul>
+            <li>If x ∈T, then x ∈S ∩T, and thus also x ∈(S ∩T) &#8746;(S &#8722;T).</li>
+            <li>If x ∈/ T, then x ∈(S &#8722;T), and thus again x ∈(S ∩T) &#8746;(S &#8722;T).</li>
+        </ul>
+        <p>To prove (1.2), consider any x ∈ (S ∩T) &#8746;(S &#8722;T). Either x ∈ S ∩T or x ∈S &#8722;T</p>
+        <ul>
+            <li>If x ∈S ∩T, then x ∈S</li>
+            <li>If x ∈S ∩T, then x ∈S</li>
+        </li>
+        </ul>
+    <img class="figure" src="image/1.JPG">
+    <p>In computer science, we frequently use the following additional notation(these notation
+        can be viewed as short hands):</p>
+    <p>Given a set S and a natural number n ∈N,</p>
+    <p>S<sup>n</sup> is the set of length n “strings” (equivalently n-tuples) with alphabet</p>
+    <p>S. Formally we define it as the product of n copies of S (i.e., S &#215;S &#215; ··· &#215; S).</p>
+    <ul>
+        <li>S*
+            is the set of finite length “strings” with alphabet S. Formally we define it as the union of 
+            S<sup>0</sup> S<sup>1</sup> S<sup>2</sup> where S<sup>0</sup> is a set thatcontains only one element: the
+            empty string (or the empty tuple “()”).</li>
+        <li>[n] Is the set {0, 1, . . ., n &#8722;1}.</li>
+    </ul>
+    <p>Commonly seen set includes {0, 1}<sup>n</sup> as the set of n-bit strings, {0, 1}<sup>*</sup> as the set of finite length bit strings. Also observe that │ [n] │ = n.</p>
+    <p>Before we end this section, let us revisit our informal definition of sets: an
+        unordered “collection” of objects. In 1091, Russel came up with the following &#39;set”, known as Russel
+        &#39;s paradox <sup>1</sup>:</p>
+        <p class="margin1">S = {x |x &#8713 x}</p>
+    <p>That is, S is the set of all sets that don&#39;t contain themselves as an element.This might seem
+        like a natural “collection”, but is S ∈ S? It&#39;s not hard to see that S ∈ S ↔ S &#8713; S. The
+        conclusion today is that S is not a good “collection” of objects; it is not a set.</p>    
+    <p>So how will know if {x │ x satisfies some condition} is a set? Formally, sets can be defined
+        axiomatically where only collections constructed from a careful list of rules are considered sets.
+        This is outside the scope of this course. We will take a short cut, and restrict our attention to well
+        &#8722; behaved universe. Let E be all the objects that we are interested in (numbers, letters, etc.), and
+        let U = E &#8746; P (E) &#8746; P (P (E)) i.e., E, subsets of E and subsets of subsets of E. In fact, we may extend
+        with three power set operations, or indeed any finite numberof power set operations. Then, S
+        = x │ x and some condition holds is always a set.</p>
+    <h3>Functions</h3>
+    <p>A function f : S → T is a “mapping” from elements in set S to elements in set T. formally, f is a
+        relation on S and T such that for each s ∈ S there exists a unique t ∈ T such that (s, t) ∈ R. S is
+        the domain of f , and T is the range of f . {y |y = f(x) for some x ∈S}is the image of f .</p>
+    <p>We often think of a function as being characterized by an algebraic formula, e.g., y = 3x 2
+        characterizes the function f (x) = 3x 2. Not all formulas characterizes a function, e.g. x<sup>
+        2</sup> + y<sup>2</sup> = 1 is a relation (a circle) that is not a function (no unique y for each x). Some functions
+        are also not easily characterized by an algebraic expression, e.g., the function mapping past
+        datesto recorded weather.</p>
+        <p><b>INJECTION.</b> f : S →T is injective (one-to-one) if for every t ∈ T , there exists at most one s ∈ S such that f (s) = t, Equivalently, f is injective if whenever s /= s, we have f(s) /= f(s).</p>
+        <p>Example 1.</p>
+        <ul>
+            <li>f : N →N, f(x) = 2x is injective.</li>
+            <li>f : R+ →R+, f(x) = x<sup>2</sup> is injective.</li>
+            <li>f : R →R, f(x) = x<sup>2</sup> is not injective since (&#8722;x)<sup>2</sup> = x<sup>2</sup></li>
+        </ul>
+    <p><b>SURJECTION.</b> f : S T is surjective (onto) if the image of f equals its range. Equivalently,
+        for every t T , there exists some s S such that f(s) = t.</p>
+        <p>Example 2.</p>
+        <ul>
+            <li>f : N →N, f(x) = 2x is not surjective.</li>
+            <li>f : f : R+ →R+, f(x) = x<sup>2</sup> is surjective.</li>
+            <li>f : R → R, f(x) = x<sup>2</sup> is not injective since negative reals don&#39;t have realsquare roots.</li>
+        </ul>
+    <p><b>BIJECTION.</b> f : S T is bijective, or a one-to-one corre- spondence, if it is injective
+        and surjective.</p>
+        <p>See Figure 1.3 for an illustration of injections, surjections, and bijections.</p>
+    <p>INVERSE RELATION. Given a function f : S → T , the inverse relation f<sup> &#8722;1</sup> on T and S is defined by (t, s) ∈f<sup> &#8722;1</sup> if and only if f(s) = t.</p>
+    <p>If f is bijective, then f <sup> &#8722;1</sup> is a function (unique inverse for each t). Similarly, if f is injective, then f <sup> &#8722;1</sup> is a also function if we restrict the domain of f <sup> &#8722;1</sup> to be the image of f . 
+        Often an easy way to show that a function is one-to-one isto exhibit such an inverse mapping. In both these cases, f<sup> &#8722;1</sup>(f (x)) = x.</p>
+    <h4>Set Cardinality, Revisited</h4>
+    <p>Bijections are very useful for showing that two sets have the same numberof elements. If f :
+        S → T is a bijection and S and T are finite sets, then |S|= |T |. In fact, we will extend this
+        definition to infinite sets as well.</p>
+    <p><b>SET CARDINALITY.</b> Let S and T be two potentially infinite sets. S and T have the same cardinality, written as |S|= |T|, if there exists a bijection f : S →T (equivalently, if there exists a bijection f<sup>J</sup> : T →S).
+         T has cardinality at larger or equal to S, written as |S|≤|T |, if there exists an injection g : S →T (equivalently, if there exists a surjection g J: T →S).</p>    
+    <p>To “intuitively justify” Set Cardinality, see Figure 1.3. The next theorem shows that this
+        definition of cardinality corresponds well with our intuition for size: if both sets are at least as large
+        as the other, then they have the same cardinality.</p>
+        <img class="figure" src="image/2.JPG">
+    <p><b>THEOREM 1.</b> (Cantor-Bernstein-Schroeder). If |S| ≤ |T | and |T | ≤ |S|, then |S|= |T |. In other
+        words, given injective maps, g : S →T and h : T →S, we can construct a bijection f : S →
+        T.</p>
+    <p>We omit the proof of Theorem 1; interested readers can easily find multiple flavors of proofs
+        online. Set cardinality is much more interesting when the sets are infinite. The cardinality of the
+        natural numbers is extra special, since you can “count” the numbers. (It is also the “smallest
+        infinite set”, a notion that is outside the scope of this course.)</p>
+    <p>A set S is countable if it is finite or has the same cardinality as N<sup>+</sup>. Equivalently, S is countable if |S|≤|N<sup>+</sup>|.</p>
+    <p>Example</p>
+    <ul>
+        <li>{1, 2, 3} is countable because it is finite.</li>
+        <li>N is countable because it has the same cardinality as N<sup>+</sup>; consider f :N<sup>+</sup> →N, f(x) = x &#8722; 1.</li>
+        <li>The set of positive even numbers, S = {2, 4, . . . }, is countable consider f : N<sup>+</sup> →S, f(x) = 2x.</li>
+    </ul>
+    <p><b>THEOREM 2.</b> The set of positive rational numbers Q+ are countable.</p>
+    <p>Proof. Q<sup>+</sup> is clearly not finite, so we need a way to count Q<sup>+</sup>. Note that double counting, triple counting, even counting some element infinite
+       many times is okay, as long as we eventually count all of Q<sup>+</sup>. I.e., we implicitly construct a surjection f : N<sup>+</sup> → Q<sup>+</sup>.</p>
+    <p>Let us count in the following way. We first order the rational numbersp/q by the value of p +
+        q; then we break ties by ordering according to p. The ordering then looks like this:</p>
+        <ul>
+            <li>First group (p + q = 2): 1/1</li>
+            <li>Second group (p + q = 3): 1/2, 2/1</li>
+            <li>Third group (p + q = 4): 1/3, 2/2, 3/1</li>
+        </ul>
+    <p>Implicitly, we have f (1) = 1/1, f = &#189;, f (3) = 2/1, etc. Clearly, f is a surjection. See Figure 1.4 for
+        an illustration of f.</p>
+        <img class="figure" src="image/3.JPG">
+        <p><b>THEOREM 3.</b>There exists sets that are not countable.</p>
+        <p>Proof. Here we use Cantor&#39;s diagonlization argument. Let S be the set of infinite sequences
+            (d<sub>1</sub>, d<sub>2</sub>,) over digits {0, 1}. Clearly S is infinite. To show that there cannot be a bijection with
+            N<sup>+</sup>, we proceed by contradiction.Suppose f : N<sup> +</sup> → S is a bijection. We can then enumerate
+            these strings using f, producing a 2-dimensional table of digits:</p>
+            <img class="figure" src="image/4.JPG">   
+    <p>Now consider s<sup>*</sup> = (1 - d<sup>1</sup> <sub>1</sub> , 1 - d<sup>2</sup> <sub>2</sub> , 1 - d<sup>3</sup> <sub>3</sub> , ...), i.e., we are taking the diagonal of the above table, and flipping all the digits.
+         Then for any n, s<sup>*</sup> is different from s<sup>n</sup> in the n<sup>th</sup> digit. This contradicts the fact that f is a bijection.</p>
+    <p><b>THEOREM 4.</b> The real interval [0, 1] (the set of real numbers between 0 and1, inclusive) is
+        uncountable.</p>
+    <p>Proof. We will show that [0, 1] S , where S is the same set as in the proof of Theorem 3.
+        Treat each s = (d<sub>1</sub>, d<sub>2</sub>, . . . ∈) S as the real number between 0 and 1 with the binary expansion
+        0.d<sub>1</sub>, d<sub>2</sub> . Note that this does not establish a bijection; some real numbers have two binary
+        expansions, e.g., not establish a bijection; some real numbers have two binary expnsions, e.g,
+        0.1 = 0.0111 (similarly, in decimal expansion, we have 0.1 = 0.0999 <sup>2</sup>).</p>
+    <p>We may overcome this “annoyance” in two ways:</p>
+    <ul>
+        <li>Since each real number can have at most two decimal representations (most only have
+            one), we can easily extend the above argument to show that S < [0, 2] (i.e., map [0, 1] to
+            one representation, and [1, 2] to the other). It remains to show that [0, 1] = [0, 2] (can you
+            think of a bijection here?).</li>
+        <li>We may repeat Cantor&#39;s diagonlization argument as in the proof of Theorem 3, in
+            decimal expansion. When we construct s*, avoid using the digits 9 and 0 (e.g., use only
+            the digits 4 and 5).</li>
+    </ul>
+    <p>A major open problem in mathematics (it was one of Hilbert&#39;s 23 famous problems listed 1900)
+        was whether there exists some set whose cardinality is between N and R (can you show that R
+        has the same cardinality as [0, 1]?).<br>
+        Here is a naive candidate: P(N). Unfortunately, P(N) has the same cardinality as [0, 1]. Note
+       that every element S ∈ P(N) corresponds to an infinitely long sequence over digits {0, 1} (the n<sup>th</sup> digit
+       is 1 if and only if the number n ∈S). Again, we arrive at the set S in the proof of Theorem 3.<br><br>
+    The Continuum Hypothesis states that no such set exists. Godel and Cohen together showed (in
+        1940 and 1963) that tis can neither be proved nor disproved using the standard axioms underlying
+        mathematics.</p>
+    <h3>Sequences and Summations</h3>
+    <h3>Sequence</h3>
+    <p>A sequence is a discrete structure used to represent an <u>ordered</u> list. A sequence is a function
+        from a subset of the set of integers (usually either the set {0,1,2,. . .} or {1,2, 3,. . .}to a set S.
+        We use the notation an to denote the image of the integer n. We call an a term of the sequence.
+        Notation to represent sequence is {a<sub>n</sub>}<br><br> Example 1.</p>
+    <ul>
+        <li>{1, 1/2, 1/3, 1/4, . . .} or the sequence {a<sub>n</sub>} where a<sub>n</sub> = 1/n, n<sub>&#8712;</sub>Z<sup>+</sup>.</li>
+        <li>{1,2,4,8,16, . . .} = {a<sub>n</sub>} where an = 2<sup>n</sup>
+            , n<sub>&#8712;</sub>N.</li>
+        <li>{1<sup>2</sup>,2<sup>2</sup>,3<sup>2</sup>,4<sup>2</sup>,. . .} = {a<sub>n</sub>} where an = n<sup>2</sup>, n<sub>&#8712;</sub>Z<sup>+</sup></li>
+    </ul>
+    <h3>Common Sequences</h3>
+    <table cellspacing="3" cellpadding="5" width="400px" height="250px" >
+    <tr>
+        <td>Arithmetic</td>
+        <td>a, atd, at+2d, at3d, at4d, ...</td>
+    </tr>
+    <tr>
+        <td>n<sup>2</sup></td>
+        <td>1, 4, 9, 16, 25,...</td>
+    </tr>
+    <tr>
+        <td>n<sup>3</sup></td>
+        <td>1, 8, 27, 64, 125,...</td>
+    </tr>
+    <tr>
+        <td>n<sup>4</sup></td>
+        <td>1, 8, 27, 64, 125,...</td>
+    </tr>
+    <tr>
+        <td>2<sup>n</sup></td>
+        <td>2, 4, 8, 16, 32,...</td>
+    </tr>
+    <tr>
+        <td>3<sup>n</sup></td>
+        <td>3,9, 27, 81, 243,...</td>
+    </tr>
+    <tr>
+        <td>n!</td>
+        <td>1, 2, 6, 24, 120,...</td>
+    </tr>
+</table> 
+    <ul>
+        <li>Notation for describing the <u>sum</u> of the terms</li>
+        <p>a<sub>m</sub>, a<sub>m+1</sub>, . . ., a<sub>n</sub> from the sequence, {a<sub>n</sub>}</p>
+    </ul>
+    <img class="figure" src="image/6.JPG"> 
+    <table>
+       
+    <ul>
+        <li>j is the index of summation (dummy variable)</li>
+        <li>The index of summation runs through all integers from its lower limit, m, to its upper limit,
+            n.</li>
+    </ul>
+    <p>Example 2.</p>
+    <img class="figure" src="image/7.JPG"> 
+    <p>Summations follow all the rules of multiplication and addition!</p>
+    <img class="figure" src="image/8.JPG">
+    <h3>Telescoping Sums</h3>
+    <img class="figure" src="image/9.JPG">
+    <p>Example 3.</p>
+    <img class="figure" src="image/10.JPG">
+    <p><b>Closed Form Solutions</b><br><br>
+        A simple formula that can be used to calculate a sum without doing all the additions.<br><br>
+        Example 4.</p>
+    <img class="figure" src="image/11.JPG"> 
+    <p><b>Proof:</b> First we note that k2 - (k-1)2 = k2 - (k2 -2k+1) = 2k-1. Since k2 -(k-1)2 = 2k-1, then 
+        we can sum each side from k=1 to k=n</p>
+        <img class="figure" src="image/12.JPG"> 
+    <h3>Closed Form Solutions to Sums</h3>
+    <img class="figure" src="image/13.JPG"> 
+    <h3>Double Summations</h3>
+    <img class="figure" src="image/14.JPG">
+    <h3>Cardinality</h3>
+    <p>Earlier we defined cardinality of a set as the number of elements in the set. We can extend this idea to infinite sets. The sets A and B have the same cardinality if and only if there is a one-to-
+        one correspondence from A to B. A set that is either finite or has the same cardinality as the set of natural numbers is called countable. A set that is not countable is called uncountable. <br><br>Cardinality of set of natural numbers?
+        <br><br>An infinite set is countable if and only if it is possible to list the elements in a sequence (indexed by the positive integers).</p>
+        <p class="p1">&#8722; Why? A one-to-one correspondence f can be expressed in terms of the sequence a1, a2, a3...., where a1 = f(1), a2 =f(2), etc.</p>
+        <p class="p1">&#8722; One-to-one correspondence for set of odd positive integers (in terms of positive
+            integers)?<br><br>
+            f(n) = 2n - 1</p>
+</body>
+</html>
