@@ -159,6 +159,9 @@ nav ul li a{
     text-align: initial;
 }
 @media screen and (max-width: 770px){
+     .banner-text p{
+        font-size: 15px;
+    }
     .title-text h1{
         font-size: 35px;
     }
