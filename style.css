@@ -81,6 +81,9 @@ nav ul li a{
     margin-top: 15px;
 }
 @media screen and (max-width: 770px){
+     .banner-text p{
+        font-size: 15px;
+    }
     .banner-text h1{
         font-size: 44px;
 }
@@ -90,7 +93,6 @@ nav ul li a{
     margin: 20px auto;
 }
 
-/* feature */
 
 #objectives{
     width: 100%;
